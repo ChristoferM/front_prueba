@@ -1,0 +1,35 @@
+<p>vista-usuario works!</p>
+<div class="espacio">
+
+    <table class="table">
+
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">nombre</th>
+                <th scope="col">Activo</th>
+                <th scope="col">rol</th>
+
+            </tr>
+        </thead>
+
+        <tr *ngFor="let usuario of usuarios">
+            <td th scope="row">{{usuario.idUsuario}}</td>
+            <td th scope="row">{{usuario.nombre}}</td>
+            <td th scope="row">{{usuario.activo}}</td>
+            <!--<td th scope="row">{{rol.enable}}</td>
+            <td>
+
+                <button (click)="delete(usuario.idUsuario)" type="button" class="btn btn-danger btn-number" data-type="minus">
+                    delete
+                </button>
+
+                <button (click)="cambiar(usuario.nombre,usuario.activo)" type="button" class="btn btn-warning" data-type="minus">
+                    Cambiar estado
+                </button>
+            </td>-->
+
+        </tr>
+
+
+    </table>
+</div>

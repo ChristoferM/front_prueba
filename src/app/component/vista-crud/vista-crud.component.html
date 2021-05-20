@@ -1,0 +1,51 @@
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<div>
+    <h3>Crear nuevo usuario</h3>
+    <input type="text" name="nombre" id="nombre" #name placeholder="nombre" [(ngModel)]="usuario.nombre">
+    <br>
+
+    <!--<input type="text" name="activo" id="activo" #phone placeholder="activo" [(ngModel)]="usuario.activo">-->
+
+    <br>
+    <select name="enable" id="enable" #enable [(ngModel)]="usuario.activo">
+    <option *ngFor="let activo of activos" [value]="activo.idRol">{{activo.nombre}}</option>
+    </select>
+    <select name="enable" id="enable" #enable [(ngModel)]="usuario.idrol">
+        <option *ngFor="let rols of rol" [value]="rols.idRol">{{rols.nombre}}</option>
+    </select>
+    <button (click)="save()">
+        Save
+    </button>
+
+</div>
+
+
+
+<div>
+    <h3>Editar Un Usuario </h3>
+    <h6>Debe registrar el id Del usuario</h6>
+    <input type="text" name="id" id="id" #phone placeholder="id" [(ngModel)]="usuarioEditar.idUsuario">
+    <br>
+    <input type="text" name="nombre" id="nombre" #name placeholder="nombre" [(ngModel)]="usuarioEditar.nombre">
+
+
+
+
+    <br>
+    <select name="enable" id="enable" #enable [(ngModel)]="usuarioEditar.activo">
+    <option *ngFor="let activo of activos" [value]="activo.idRol">{{activo.nombre}}</option>
+    </select>
+    <select name="enable" id="enable" #enable [(ngModel)]="usuarioEditar.idrol">
+        <option *ngFor="let rols of rol" [value]="rols.idRol">{{rols.nombre}}</option>
+    </select>
+    <button (click)="editar()">
+        Editar
+    </button>
+
+</div>

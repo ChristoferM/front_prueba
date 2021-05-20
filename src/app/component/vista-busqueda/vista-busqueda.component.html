@@ -1,0 +1,28 @@
+<div>
+    <h3>Escriba el nombre del usuario que desea buscas</h3>
+    <input type="text" name="nombre" id="nombre" #name placeholder="nombre" [(ngModel)]="nombre">
+    <!--<br> {{nombre}}-->
+    <button (click)="buscarUsuario()">
+        Buscar
+    </button>
+</div>
+<table>
+    <tr>
+        <th>
+            nombre
+        </th>
+        <th>
+            Activo
+        </th>
+        <th>
+            identificador
+        </th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let usuario of usuarios">
+            <td th scope="row">{{usuario.nombre}}</td>
+            <td th scope="row">{{usuario.activo}}</td>
+            <td th scope="row">{{usuario.idUsuario}}</td>
+        </tr>
+    </tbody>
+</table>
